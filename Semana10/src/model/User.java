@@ -49,6 +49,9 @@ public class User{
 		return msg;
 	}
 
+	public String getId() {
+		return id;
+	}
 	/**
 	 * getFirstValidPosition: search in array if exist one valid position
 	 * @return pos -1 if the position does not exist, a number in [0, 9] if exist a valid position
