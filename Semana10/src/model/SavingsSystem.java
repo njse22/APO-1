@@ -14,6 +14,11 @@ public class SavingsSystem{
 
 	}
 
+	public User findUserById(String userId){
+		return null;
+	}
+
+
 	/**
 	 * addUser: add a new user in the array of users  
 	 * @param userName the name of user to add 
