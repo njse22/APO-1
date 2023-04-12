@@ -1,1 +1,4 @@
-# Algoritmos y programación 1 Grupo 1
+Oscar Stiven Munoz Ramirez
+
+cod: A00399922
+

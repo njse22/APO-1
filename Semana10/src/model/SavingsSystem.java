@@ -8,16 +8,12 @@ public class SavingsSystem{
 	public static final int SIZE_USER = 5; 
 	//  declaración 
 	private User[] users; 
+	private User currentUser=null;
 
 	public SavingsSystem(){ 
 		users = new User[SIZE_USER];
 
 	}
-
-	public User findUserById(String userId){
-		return null;
-	}
-
 
 	/**
 	 * addUser: add a new user in the array of users  
@@ -32,6 +28,27 @@ public class SavingsSystem{
 		if(pos != -1){
 			users[pos] = usuario; 
 		}
+	}
+
+	public boolean searchUser(String id){
+		boolean isFound=false;
+		boolean isNull=false;
+		for (int i = 0; i < users.length && !isNull; i++) {
+
+			if(users[i]!=null){
+				if(users[i].getId().equalsIgnoreCase(id)){
+					currentUser=users[i];
+					isFound=true;
+				}
+
+			}else{
+				isNull=true;
+			}
+			
+		}
+
+
+		return isFound;
 	}
 
 	/**

@@ -34,7 +34,8 @@ public class Main{
         System.out.println("0. Salir"); 
         System.out.println("1. Add User"); 
         System.out.println("2. Add Saving"); 
-        System.out.println("3. List savings"); 
+        System.out.println("3. List savings");
+        System.out.println("4. Seach User"); 
 
     }
 
@@ -57,8 +58,10 @@ public class Main{
 
             case 0:
                 System.out.println("Exit."); 
-                break; 
-
+                break;
+                
+            case 4:
+                searchUser();
             case -1: 
                 System.out.println("Invalid Option!!"); 
                 break; 
@@ -97,6 +100,12 @@ public class Main{
 
     }
 
+    public void searchUser(){
+        String name="";
+        System.out.println("Type id of the user: ");
+        name=reader.next();
+        System.out.println("It was found?: "+controller.searchUser(name));
+    }
     public void addSaving(){
         double costSaving; 
         String nameSaving; 
